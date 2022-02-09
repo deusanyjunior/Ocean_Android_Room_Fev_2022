@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity() {
         productViewModel.products.observe(
             this, {
 
-                tvProductName.text = "Produtos: "
+                tvProductName.text = "Produtos:\n"
 
                 it.forEach {
                     product ->
-                    tvProductName.append("${product.name}\n")
+                    tvProductName.append("- ${product.name};\n")
                 }
             }
         )
